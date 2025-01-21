@@ -2,17 +2,17 @@ package org.example.factory_method.restaurant;
 
 public class Restaurant{
 
-    public Object oderBurger(String request){
+    public Burger oderBurger(String request){
+        Burger burger = null;
+
         if (request.equalsIgnoreCase("BEEF")){
-            BeefBurger beefBurger = new BeefBurger();
-            beefBurger.prepare();
-            return beefBurger;
+            burger = new BeefBurger();
         } else if (request.equalsIgnoreCase("VEGGIE")){
-            VeggieBurger veggieBurger = new VeggieBurger();
-            veggieBurger.prepare();
-            return  veggieBurger;
+            burger = new VeggieBurger();
         }
-        return null;
+
+        burger.prepare();
+        return burger;
     }
 
 }
