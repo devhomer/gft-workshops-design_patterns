@@ -8,10 +8,10 @@ public class Restaurant{
     //}
     public static void main(String[] args) {
         BurgerFactory burgerFactory = new BeefFactory();
-        Burger beefBurger = burgerFactory.orderBurger();
+        Burger beefBurger = burgerFactory.orderBurger("GRILLED");
 
         burgerFactory = new VeggieFactory();
-        Burger veggieBurger = burgerFactory.orderBurger();
+        Burger veggieBurger = burgerFactory.orderBurger("BROILED");
     }
 
 }
