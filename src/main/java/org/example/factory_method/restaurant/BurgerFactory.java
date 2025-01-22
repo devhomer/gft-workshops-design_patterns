@@ -9,11 +9,18 @@ public abstract class BurgerFactory {
      * @return Burger
      */
     public Burger orderBurger(String typeCooked){
-        Burger burger = createBurger(typeCooked);
+        Burger burger = null;
+        if("GRILLED".equalsIgnoreCase(typeCooked)){
+            burger = createGrilledBurger();
+        } else if (("BROILED").equalsIgnoreCase(typeCooked)){
+            burger = createBroiledBurger();
+        }
+
         burger.prepare();
         return burger;
     }
 
-    protected abstract Burger createBurger(String typeCooked);
+    protected abstract GrilledBurger createGrilledBurger();
+    protected abstract BroiledBurger createBroiledBurger();
 
 }

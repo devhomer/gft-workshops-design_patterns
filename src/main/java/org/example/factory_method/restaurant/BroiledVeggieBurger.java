@@ -1,6 +1,6 @@
 package org.example.factory_method.restaurant;
 
-public class BroiledVeggieBurger implements Burger{
+public class BroiledVeggieBurger implements BroiledBurger{
 
     @Override
     public void prepare(){
