@@ -1,26 +1,8 @@
 package org.example.structural.bridge;
 
-public class CreditCard implements CreditCardPayment{
+public abstract class CreditCard {
 
-    @Override
-    public void executePay() {
-
-    }
-
-    public void tdcUniversityPaymentWithoutSecurity(){
-        executePay();
-    }
-
-    public void tdcUniversityPaymentWithSecurity(){
-        executePay();
-    }
-
-    public void tdcGoldPaymentWithoutSecurity(){
-        executePay();
-    }
-
-    public void tdcGoldPaymentWithSecurity(){
-        executePay();
-    }
+    abstract void validation() ;
+    abstract void checkBalance();
 
 }

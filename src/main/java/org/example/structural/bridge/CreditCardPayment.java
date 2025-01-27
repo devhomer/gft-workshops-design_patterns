@@ -1,7 +1,13 @@
 package org.example.structural.bridge;
 
-public interface CreditCardPayment {
+public abstract class CreditCardPayment {
 
-    void executePay();
+    protected CreditCard creditCard;
+
+    protected CreditCardPayment(CreditCard creditCard){
+        this.creditCard = creditCard;
+    }
+
+    public abstract void executePay();
 
 }
