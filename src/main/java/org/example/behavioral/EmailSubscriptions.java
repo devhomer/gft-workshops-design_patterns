@@ -1,6 +1,6 @@
 package org.example.behavioral;
 
-public class EmailSubscriptions {
+public class EmailSubscriptions implements SubscriptionChannel{
 
     private final String email;
     private final String user;

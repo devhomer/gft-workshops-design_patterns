@@ -19,6 +19,7 @@ public class Store {
         store.reStock();
 
         store.getService().unsubscribe(luis);
+        store.getService().subscribe(new MobileSubscriptions("Luis"));
 
         System.out.println("\nUpdated subscription list\n");
 

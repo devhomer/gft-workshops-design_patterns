@@ -5,17 +5,17 @@ import java.util.List;
 
 public class NotificationService {
 
-    private final List<EmailSubscriptions> subscribers;
+    private final List<SubscriptionChannel> subscribers;
 
     public NotificationService(){
         subscribers = new ArrayList<>();
     }
 
-    public void subscribe(EmailSubscriptions subscriber){
+    public void subscribe(SubscriptionChannel subscriber){
         subscribers.add(subscriber);
     }
 
-    public void unsubscribe(EmailSubscriptions subscriber){
+    public void unsubscribe(SubscriptionChannel subscriber){
         subscribers.remove(subscriber);
     }
 
