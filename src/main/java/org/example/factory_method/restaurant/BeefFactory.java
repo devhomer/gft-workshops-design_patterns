@@ -1,14 +1,14 @@
 package org.example.factory_method.restaurant;
 
-public class BeefFactory extends BurgerFactory{
+public class BeefFactory implements BurgerFactory{
 
     @Override
-    protected GrilledBurger createGrilledBurger() {
+     public GrilledBurger createGrilledBurger() {
         return new GrilledBeefBurger();
     }
 
     @Override
-    protected BroiledBurger createBroiledBurger() {
+    public BroiledBurger createBroiledBurger() {
         return new BroiledBeefBurger();
     }
 }

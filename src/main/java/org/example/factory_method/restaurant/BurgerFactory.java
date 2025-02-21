@@ -1,6 +1,6 @@
 package org.example.factory_method.restaurant;
 
-public abstract class BurgerFactory {
+public interface BurgerFactory {
 
 
     /**
@@ -8,7 +8,7 @@ public abstract class BurgerFactory {
      * @param typeCooked String
      * @return Burger
      */
-    public Burger orderBurger(String typeCooked){
+    /*public Burger orderBurger(String typeCooked){
         Burger burger = null;
         if("GRILLED".equalsIgnoreCase(typeCooked)){
             burger = createGrilledBurger();
@@ -18,9 +18,9 @@ public abstract class BurgerFactory {
 
         burger.prepare();
         return burger;
-    }
+    }*/
 
-    protected abstract GrilledBurger createGrilledBurger();
-    protected abstract BroiledBurger createBroiledBurger();
+    GrilledBurger createGrilledBurger();
+    BroiledBurger createBroiledBurger();
 
 }

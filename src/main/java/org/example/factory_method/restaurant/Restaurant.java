@@ -4,12 +4,19 @@ public class Restaurant{
 
     public static void main(String[] args) {
         BurgerFactory burgerFactory = new BeefFactory();
-        Burger griledBeefBurger = burgerFactory.orderBurger("GRILLED");
+        /*Burger griledBeefBurger = burgerFactory.orderBurger("GRILLED");
 
         burgerFactory = new VeggieFactory();
         Burger grilledVeggieBurger = burgerFactory.orderBurger("GRILLED");
 
-        Burger broiledVeggieBurger = burgerFactory.orderBurger("BROILED");
+        Burger broiledVeggieBurger = burgerFactory.orderBurger("BROILED");*/
+
+        Burger grilledBeefBurger =  burgerFactory.createGrilledBurger();
+        grilledBeefBurger.prepare();
+
+        burgerFactory = new VeggieFactory();
+        Burger grilledVeggieBurger = burgerFactory.createBroiledBurger();
+        grilledVeggieBurger.prepare();
 
     }
 
